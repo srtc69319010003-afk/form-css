@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ระบบลงทะเบียนนักศึกษาใหม่</title>
+</head>
+<body>
+
+<header>
+    <h1>ระบบลงทะเบียนนักศึกษาใหม่</h1>
+    <p>กรุณากรอกข้อมูลให้ครบถ้วนเพื่อทำการลงทะเบียน</p>
+</header>
+
+<main>
+    <form>
+        <fieldset>
+            <legend>ข้อมูลการเข้าสู่ระบบ</legend>
+
+            <label for="username">ชื่อผู้ใช้ (Username):</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">รหัสผ่าน (Password):</label>
+            <input type="password" id="password" name="password" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>ข้อมูลส่วนตัว</legend>
+
+            <label for="fullname">ชื่อ-นามสกุล:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="เช่น นายสมชาย ใจดี"><br><br>
+
+            <label for="email">อีเมล:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="birthdate">วัน/เดือน/ปีเกิด:</label>
+            <input type="date" id="birthdate" name="birthdate"><br><br>
+
+            <span>เพศ:</span><br>
+            <input type="radio" id="male" name="gender" value="ชาย">
+            <label for="male">ชาย</label>
+
+            <input type="radio" id="female" name="gender" value="หญิง">
+            <label for="female">หญิง</label>
+
+            <input type="radio" id="other" name="gender" value="อื่นๆ">
+            <label for="other">อื่นๆ</label><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>ข้อมูลการศึกษาและอื่นๆ</legend>
+
+            <label for="level">ระดับชั้น:</label>
+            <select id="level" name="level">
+                <option value="ปวช.1">ปวช.1</option>
+                <option value="ปวช.2">ปวช.2</option>
+                <option value="ปวช.3">ปวช.3</option>
+                <option value="ปวส.1">ปวส.1</option>
+                <option value="ปวส.2">ปวส.2</option>
+            </select><br><br>
+
+            <span>ความสนใจเพิ่มเติม:</span><br>
+            <input type="checkbox" id="webdesign" name="interest" value="Web Design">
+            <label for="webdesign">Web Design</label><br>
+
+            <input type="checkbox" id="database" name="interest" value="Database">
+            <label for="database">Database</label><br>
+
+            <input type="checkbox" id="coding" name="interest" value="Coding">
+            <label for="coding">Coding</label><br><br>
+
+            <label for="address">ที่อยู่ปัจจุบัน:</label><br>
+            <textarea id="address" name="address" rows="4" cols="50"></textarea><br>
+        </fieldset>
+
+        <br>
+
+        <button type="submit">ลงทะเบียน</button>
+        <button type="reset">ล้างข้อมูล</button>
+
+    </form>
+</main>
+
+<footer>
+    <p>สงวนลิขสิทธิ์ 2026 แผนกวิชาเทคโนโลยีสารสนเทศ วิทยาลัยเทคนิคสุราษฎร์ธานี</p>
+</footer>
+
+</body>
+</html>
