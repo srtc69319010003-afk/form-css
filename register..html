@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฟอร์มลงทะเบียนนักศึกษาใหม่</title>
+    <!-- นำเข้าฟอนต์ Sarabun จาก Google Fonts เพื่อการแสดงผลภาษาไทยที่สวยงาม -->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- ข้อ 1: เชื่อมโยงไฟล์ style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ข้อ 3: ID Selector #main-header -->
+    <header id="main-header">
+        <h1>ระบบลงทะเบียน<span>นักศึกษาใหม่</span></h1>
+        <p>กรุณากรอกข้อมูลส่วนตัวให้ครบถ้วนและถูกต้อง (ช่องที่มีเครื่องหมาย <span class="required-mark">*</span> จำเป็นต้องกรอก)</p>
+    </header>
+
+    <!-- ข้อ 2 & 3: กล่องคอนเทนเนอร์หลัก .form-container -->
+    <main class="form-container">
+        <form action="#" method="POST">
+            
+            <fieldset>
+                <legend>ข้อมูลส่วนตัวนักศึกษา</legend>
+
+                <div class="form-group">
+                    <label for="student-id">รหัสประจำตัวประชาชน <span class="required-mark">*</span></label>
+                    <input type="text" id="student-id" name="student_id" maxlength="13" placeholder="กรอกเลขบัตรประชาชน 13 หลัก" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prefix">คำนำหน้าชื่อ <span class="required-mark">*</span></label>
+                    <select id="prefix" name="prefix" required>
+                        <option value="">-- เลือกคำนำหน้า --</option>
+                        <option value="mr">นาย</option>
+                        <option value="miss">นางสาว</option>
+                        <option value="mrs">นาง</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullname">ชื่อ - นามสกุล <span class="required-mark">*</span></label>
+                    <input type="text" id="fullname" name="fullname" placeholder="เช่น นายสมชาย ใจดี" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="birthdate">วัน/เดือน/ปีเกิด <span class="required-mark">*</span></label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>ข้อมูลการติดต่อและการศึกษา</legend>
+
+                <div class="form-group">
+                    <label for="email">อีเมล <span class="required-mark">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">เบอร์โทรศัพท์ <span class="required-mark">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="08X-XXX-XXXX" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="major">สาขาวิชาที่สมัคร <span class="required-mark">*</span></label>
+                    <select id="major" name="major" required>
+                        <option value="">-- เลือกสาขาวิชา --</option>
+                        <option value="it">เทคโนโลยีสารสนเทศ</option>
+                        <option value="cs">วิทยาการคอมพิวเตอร์</option>
+                        <option value="se">วิศวกรรมซอฟต์แวร์</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">ที่อยู่ปัจจุบัน</label>
+                    <textarea id="address" name="address" rows="3" placeholder="กรอกที่อยู่ที่สามารถติดต่อได้"></textarea>
+                </div>
+            </fieldset>
+
+            <!-- ข้อ 3: ปุ่มกด .btn-submit และ .btn-reset -->
+            <div class="button-group">
+                <button type="submit" class="btn-submit">ลงทะเบียน</button>
+                <button type="reset" class="btn-reset">ล้างข้อมูล</button>
+            </div>
+
+        </form>
+    </main>
+
+    <!-- ข้อ 3: ID Selector #main-footer -->
+    <footer id="main-footer">
+        <p>&copy; 2026 แผนกวิชาเทคโนโลยีสารสนเทศ | รายวิชาการพัฒนาซอฟต์แวร์ด้วยเทคโนโลยี Back-End</p>
+    </footer>
+
+</body>
+</html>
