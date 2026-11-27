@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฟอร์มลงทะเบียนนักศึกษาใหม่</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Sarabun', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#f0f4f8] font-sans text-base leading-relaxed text-[#333333] m-0 p-0">
+
+    <header id="main-header" class="bg-blue-900 text-white text-center px-4 py-6">
+        <h1 class="mb-1.5 text-[28px]">ระบบลงทะเบียน<span class="text-amber-400 font-bold">นักศึกษาใหม่</span></h1>
+        <p>กรุณากรอกข้อมูลส่วนตัวให้ครบถ้วนและถูกต้อง (ช่องที่มีเครื่องหมาย <span class="text-amber-400 font-bold">*</span> จำเป็นต้องกรอก)</p>
+    </header>
+
+    <main class="bg-white w-4/5 max-w-[700px] mx-auto my-5 p-7 rounded-[10px] shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
+        <form action="#" method="POST">
+
+            <fieldset class="border border-slate-300 rounded-lg p-5 mb-5">
+                <legend class="font-semibold text-blue-900 px-2">ข้อมูลส่วนตัวนักศึกษา</legend>
+
+                <div class="mb-4">
+                    <label for="student-id" class="block font-semibold mb-1.5 text-slate-800">รหัสประจำตัวประชาชน <span class="text-amber-400 font-bold">*</span></label>
+                    <input type="text" id="student-id" name="student_id" maxlength="13" placeholder="กรอกเลขบัตรประชาชน 13 หลัก" required
+                        class="w-full box-border px-3 py-2.5 border border-slate-400 rounded-md font-sans text-[15px]">
+                </div>
+
+                <div class="mb-4">
+                    <label for="prefix" class="block font-semibold mb-1.5 text-slate-800">คำนำหน้าชื่อ <span class="text-amber-400 font-bold">*</span></label>
+                    <select id="prefix" name="prefix" required
+                        class="w-full box-border px-3 py-2.5 border border-slate-400 rounded-md font-sans text-[15px]">
+                        <option value="">-- เลือกคำนำหน้า --</option>
+                        <option value="mr">นาย</option>
+                        <option value="miss">นางสาว</option>
+                        <option value="mrs">นาง</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="fullname" class="block font-semibold mb-1.5 text-slate-800">ชื่อ - นามสกุล <span class="text-amber-400 font-bold">*</span></label>
+                    <input type="text" id="fullname" name="fullname" placeholder="เช่น นายสมชาย ใจดี" required
+                        class="w-full box-border px-3 py-2.5 border border-slate-400 rounded-md font-sans text-[15px]">
+                </div>
+
+                <div class="mb-4">
+                    <label for="birthdate" class="block font-semibold mb-1.5 text-slate-800">วัน/เดือน/ปีเกิด <span class="text-amber-400 font-bold">*</span></label>
+                    <input type="date" id="birthdate" name="birthdate" required
+                        class="w-full box-border px-3 py-2.5 border border-slate-400 rounded-md font-sans text-[15px]">
+                </div>
+            </fieldset>
+
+            <fieldset class="border border-slate-300 rounded-lg p-5 mb-5">
+                <legend class="font-semibold text-blue-900 px-2">ข้อมูลการติดต่อและการศึกษา</legend>
+
+                <div class="mb-4">
+                    <label for="email" class="block font-semibold mb-1.5 text-slate-800">อีเมล <span class="text-amber-400 font-bold">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required
+                        class="w-full box-border px-3 py-2.5 border border-slate-400 rounded-md font-sans text-[15px]">
+                </div>
+
+                <div class="mb-4">
+                    <label for="phone" class="block font-semibold mb-1.5 text-slate-800">เบอร์โทรศัพท์ <span class="text-amber-400 font-bold">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="08X-XXX-XXXX" required
+                        class="w-full box-border px-3 py-2.5 border border-slate-400 rounded-md font-sans text-[15px]">
+                </div>
+
+                <div class="mb-4">
+                    <label for="major" class="block font-semibold mb-1.5 text-slate-800">สาขาวิชาที่สมัคร <span class="text-amber-400 font-bold">*</span></label>
+                    <select id="major" name="major" required
+                        class="w-full box-border px-3 py-2.5 border border-slate-400 rounded-md font-sans text-[15px]">
+                        <option value="">-- เลือกสาขาวิชา --</option>
+                        <option value="it">เทคโนโลยีสารสนเทศ</option>
+                        <option value="cs">วิทยาการคอมพิวเตอร์</option>
+                        <option value="se">วิศวกรรมซอฟต์แวร์</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="address" class="block font-semibold mb-1.5 text-slate-800">ที่อยู่ปัจจุบัน</label>
+                    <textarea id="address" name="address" rows="3" placeholder="กรอกที่อยู่ที่สามารถติดต่อได้"
+                        class="w-full box-border px-3 py-2.5 border border-slate-400 rounded-md font-sans text-[15px]"></textarea>
+                </div>
+            </fieldset>
+
+            <div>
+                <button type="submit" class="px-6 py-2.5 mr-2.5 font-sans text-[15px] font-semibold rounded-md cursor-pointer bg-green-600 text-white">ลงทะเบียน</button>
+                <button type="reset" class="px-6 py-2.5 mr-2.5 font-sans text-[15px] font-semibold rounded-md cursor-pointer bg-slate-500 text-white">ล้างข้อมูล</button>
+            </div>
+
+        </form>
+    </main>
+
+    <footer id="main-footer" class="text-center p-4 mt-6 bg-slate-200 text-slate-600 text-sm">
+        <p>&copy; 2026 แผนกวิชาเทคโนโลยีสารสนเทศ | รายวิชาการพัฒนาซอฟต์แวร์ด้วยเทคโนโลยี Back-End</p>
+    </footer>
+
+</body>
+</html>
